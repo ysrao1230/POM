@@ -53,7 +53,7 @@ public class test {
 		
 		String elem = driver.findElement(By.xpath("//*[@id=\"u_0_f\"]")).getText();
 		System.out.println(elem);
-		Assert.assertEquals("this is text", elem);
+		Assert.assertEquals("Didn't receive a code?", elem);
 			
 	}
 }
