@@ -5,6 +5,3 @@ Feature: Testing application login
     When user navigates to Login Page
     And user enters username and Password
     Then success message is displayed
-    
-    
-

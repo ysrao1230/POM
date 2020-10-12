@@ -40,7 +40,7 @@ public class test {
 		System.out.println("User eneters user name and password");
 		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("ysr036");
 		System.out.println("User name Enetered");
-		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("Srinu@1236.");
+		driver.findElement(By.xpath("//*[@id=\"pass\"]!")).sendKeys("Srinu@1236.");
 		System.out.println("Password entered");
 		driver.findElement(By.xpath("//*[@id=\"u_0_b\"]")).click();
 	}
