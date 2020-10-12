@@ -53,11 +53,6 @@ public class test {
 		
 		String elem = driver.findElement(By.xpath("//*[@id=\"u_0_f\"]")).getText();
 		System.out.println(elem);
-		/*if(elem.equalsIgnoreCase("")) {
-			System.out.println("PASS");
-		}else {
-			System.out.println("FAIL");
-		}*/
 		Assert.assertEquals("this is text", elem);
 			
 	}
