@@ -1,14 +1,30 @@
 package Stepdefinition;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class test {
+	static WebDriver driver;
+
 	@Given("^user is  on homepage$")
 	public void user_is_on_homepage() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		System.out.println("User on home page");
+		System.out.println("Opening Browser");
+		System.setProperty("webdriver.gecko.driver", "../BDD/Driver/geckodriver.exe");
+		driver = new FirefoxDriver();
+		System.out.println("Browser launched");
+		driver.get("http://facebook.com");
+		System.out.println("Website opened");
+		driver.manage().window().maximize();
+		System.out.println("Driver maximized");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 	}
 
 	@When("^user navigates to Login Page$")
