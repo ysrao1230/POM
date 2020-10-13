@@ -2,12 +2,9 @@ package Stepdefinition;
 
 import java.util.concurrent.TimeUnit;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -52,10 +49,18 @@ public class test {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("Success message displayed after login to application");
 
-		String elem = driver.findElement(By.xpath("//*[@id=\"u_0_f\"]")).getText();
-		System.out.println(elem);
-		Assert.assertEquals("Didn't receive a code?", elem);
-		driver.quit();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/" + 
+						"div[1]/div[2]/div[4]/div[1]/span/div/div[1]/i"))
+				.click();
+		driver.findElement(By.cssSelector(".b20td4e0 > div:nth-child(4) > div:nth-child(1) >"
+				+ " div:nth-child(1) > div:nth-child(2) > div:nth-child(1) >"
+				+ " div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span")).click();
+
+		/*
+		 * String elem = driver.findElement(By.xpath("//*[@id=\"u_0_f\"]")).getText();
+		 * System.out.println(elem); Assert.assertEquals("Didn't receive a code?",
+		 * elem);
+		 */ driver.quit();
 
 	}
 }

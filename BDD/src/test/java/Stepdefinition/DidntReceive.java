@@ -43,6 +43,7 @@ public class DidntReceive {
 		System.out.println("Enter" + username + "and" + password);
 		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(username);
 		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys(password);
+		driver.findElement(By.xpath("//*[@id=\"u_0_b\"]")).click();
 	
 	}
 
@@ -50,6 +51,8 @@ public class DidntReceive {
 	public void click_on_didint_recive_link(DataTable arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("navigate to next page and click on didn't recive link");
+		String str = driver.getTitle();
+		Assert.assertEquals("Facebook", str);
 		
 
 	}

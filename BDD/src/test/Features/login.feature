@@ -10,8 +10,8 @@ Feature: Testing application login
   @Functional
   Scenario: click on didnt receive link
     Given user launched browser
-    When user navigate to login page
-    And Enter "<username>" and "<password>"
-    Then click on didint recive link
+    When  user navigate to login page
+    And   Enter "ysr036" and "Srinu@1236."
+    Then  click on didint recive link
       | username | password |
       | naveenk  | test@123 |

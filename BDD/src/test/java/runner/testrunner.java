@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 	, glue = { "Stepdefinition" }
 	, plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }
-	, tags = {"@smoke,@Functional,@Regression" }
+	, tags = {"~@smoke,@Functional,@Regression" }
 	)
 
 public class testrunner {
