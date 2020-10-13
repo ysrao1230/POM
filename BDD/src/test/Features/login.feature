@@ -13,5 +13,5 @@ Feature: Testing application login
     When user navigate to login page
     And Enter "<username>" and "<password>"
     Then click on didint recive link
-      | <username> | <password> |
-      | naveenk    | test@123   |
+      | username | password |
+      | naveenk  | test@123 |
