@@ -2,16 +2,18 @@ package Stepdefinition;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class test {
-	static WebDriver driver;
+	public static WebDriver driver;
 
 	@Given("^user is  on homepage$")
 	public void user_is_on_homepage() throws Throwable {
