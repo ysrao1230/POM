@@ -11,11 +11,12 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions
-(features = "src/test/Features/login.feature",
-	glue = { "Stepdefinition"},
-	plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
-    monochrome = true)
+@CucumberOptions(features = "src/test/Features/login.feature"
+	, glue = { "Stepdefinition" }
+	, plugin = {
+		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }
+	, monochrome = true
+	, tags = {"@smoke,@Functional" })
 
 public class testrunner {
 	@AfterClass

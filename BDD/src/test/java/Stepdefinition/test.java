@@ -2,13 +2,13 @@ package Stepdefinition;
 
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import junit.framework.Assert;
 
 public class test {
 	static WebDriver driver;
@@ -40,20 +40,20 @@ public class test {
 		System.out.println("User eneters user name and password");
 		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("ysr036");
 		System.out.println("User name Enetered");
-		driver.findElement(By.xpath("//*[@id=\"pass\"]!")).sendKeys("Srinu@1236.");
+		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("Srinu@1236.");
 		System.out.println("Password entered");
 		driver.findElement(By.xpath("//*[@id=\"u_0_b\"]")).click();
 	}
 
-	@SuppressWarnings("deprecation")
 	@Then("^success message is displayed$")
 	public void success_message_is_displayed() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("Success message displayed after login to application");
-		
+
 		String elem = driver.findElement(By.xpath("//*[@id=\"u_0_f\"]")).getText();
 		System.out.println(elem);
 		Assert.assertEquals("Didn't receive a code?", elem);
-			
+		driver.quit();
+
 	}
 }
