@@ -8,11 +8,10 @@ Feature: Testing application login
     Then success message is displayed
 
   @Functional
-    Scenario: click on didnt receive link
+  Scenario: click on didnt receive link
     Given user launched browser
     When user navigate to login page
     And Enter "<username>" and "<password>"
     Then click on didint recive link
-							| username | password |
-							| naveenk  | test@123 |
-
+      | <username> | <password> |
+      | naveenk    | test@123   |
