@@ -6,11 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-
-import cucumber.api.DataTable;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.*;
 
 public class DidntReceive {
 
@@ -21,7 +17,10 @@ public class DidntReceive {
 		// Write code here that turns the phrase above into concrete actions
 		Assert.assertEquals(12, 12);
 		System.out.println("launching Browser");
-		System.setProperty("webdriver.gecko.driver", "../BDD/Driver/geckodriver.exe");
+		String dir = System.getProperty("user.dir");
+		
+		System.out.println("Directory path: "+dir);
+		System.setProperty("webdriver.gecko.driver", dir+"/Driver/geckodriver.exe");
 		driver = new FirefoxDriver();
 
 	}
@@ -37,23 +36,22 @@ public class DidntReceive {
 
 	}
 
-	@When("^Enter \"([^\"]*)\" and \"([^\"]*)\"$")
+	@And("^Enter (.*) and (.*)$")
 	public void enter_and(String username, String password) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		System.out.println("Enter" + username + "and" + password);
+		System.out.println("Enter " + username + " and " + password);
 		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(username);
 		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys(password);
 		driver.findElement(By.xpath("//*[@id=\"u_0_b\"]")).click();
-	
+
 	}
 
 	@Then("^click on didint recive link$")
-	public void click_on_didint_recive_link(DataTable arg1) throws Throwable {
+	public void click_on_didint_recive_link() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("navigate to next page and click on didn't recive link");
 		String str = driver.getTitle();
-		Assert.assertEquals("Facebook", str);
-		
+		Assert.assertEquals(str,"Facebook");
 
 	}
 }

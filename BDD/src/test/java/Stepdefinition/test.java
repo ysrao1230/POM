@@ -5,9 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.*;
 
 public class test {
 	public static WebDriver driver;
@@ -33,7 +31,7 @@ public class test {
 		System.out.println("User navigate to login page");
 	}
 
-	@When("^user enters username and Password$")
+	@And("^user enters username and Password$")
 	public void user_enters_username_and_Password() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("User eneters user name and password");
@@ -49,8 +47,7 @@ public class test {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("Success message displayed after login to application");
 
-		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/" + 
-						"div[1]/div[2]/div[4]/div[1]/span/div/div[1]/i"))
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/" + "div[1]/div[2]/div[4]/div[1]/span/div/div[1]/i"))
 				.click();
 		driver.findElement(By.cssSelector(".b20td4e0 > div:nth-child(4) > div:nth-child(1) >"
 				+ " div:nth-child(1) > div:nth-child(2) > div:nth-child(1) >"
