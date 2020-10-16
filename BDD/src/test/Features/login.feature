@@ -12,8 +12,10 @@ Feature: Testing application login
     Given user launched browser
     When user navigate to login page
     And Enter <username> and <password>
-    Then click on didint recive link
+    Then Login Page title verification
 
     Examples: 
       | username | password    |
-      | ysr036    | Srinu@1236. |
+      | ysr036   | Srinu@1236. |
+      | ysr1230  | Rao1230     |
+      | abcd     |     1234456 |
