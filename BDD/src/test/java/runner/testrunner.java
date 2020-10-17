@@ -19,6 +19,7 @@ public class testrunner {
 	@AfterClass
 	public static void ExtentReport() {
 		Reporter.loadXMLConfig(new File("config/report.xml"));
+		System.out.println("Generated");
 	}
 
 }
