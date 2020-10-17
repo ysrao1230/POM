@@ -14,10 +14,11 @@ public class FibonicSeries {
 		System.out.println("Upto " + n + ": ");
 		while (t1 <= n) {
 			System.out.print(t1 + " + ");
-
+			
+			//Sum of numbers
 			int sum = t1 + t2;
-			t1 = t2;
-			t2 = sum;
+			t1 = t2; //Swapping first number
+			t2 = sum; //Swapping second number
 		}
 		System.out.println();
 	}
@@ -33,7 +34,7 @@ public class FibonicSeries {
 			t1 = t2;
 			t2 = sum;
 
-			i++;
+			i++;// Incrementing
 		}
 	}
 }
